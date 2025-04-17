@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3ii4x5kx54ml"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_bqlq8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 650.0
+size_flags_horizontal = 4
+color = Color(0.79401, 0.599627, 0.464288, 1)
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 463.0
+offset_top = 356.0
+offset_right = 709.0
+offset_bottom = 492.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+text = "شروع "
+script = ExtResource("1_bqlq8")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
