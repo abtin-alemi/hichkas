@@ -1,11 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://c1wena2uakujj"]
+[gd_scene load_steps=12 format=3 uid="uid://x1sagw4i42ns"]
 
 [ext_resource type="Texture2D" uid="uid://vosoowtkqtx7" path="res://assets/TX Tileset Grass.png.jpeg" id="1_mpb2f"]
-[ext_resource type="PackedScene" uid="uid://bs4b4heirl2bg" path="res://player.tscn" id="2_fikhb"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="2_fikhb"]
 [ext_resource type="Texture2D" uid="uid://c5tlqwjixbfp5" path="res://assets/QVg+jM.png" id="2_t3s0t"]
 [ext_resource type="Texture2D" uid="uid://cnxyir3rp10x" path="res://assets/TX Plant.png" id="3_4r4kr"]
-[ext_resource type="Script" path="res://clay.gd" id="5_j81le"]
-[ext_resource type="Script" path="res://timer.gd" id="6_e5le0"]
+[ext_resource type="Script" path="res://scripts/clay.gd" id="5_j81le"]
+[ext_resource type="Script" path="res://scripts/Global.gd" id="6_eivsq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wci2k"]
 texture = ExtResource("1_mpb2f")
@@ -3659,8 +3659,8 @@ script = ExtResource("5_j81le")
 position = Vector2(1105.25, 289.75)
 shape = SubResource("RectangleShape2D_xl1x7")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
-script = ExtResource("6_e5le0")
+[node name="Node" type="Node" parent="."]
+script = ExtResource("6_eivsq")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

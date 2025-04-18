@@ -6,7 +6,13 @@ extends CharacterBody2D
 
 
 
+
 func _process(delta):
+	if Global.is_caly:
+		speed = 75
+	else:
+		speed = 100
+	print(Global.is_caly)
 	direction = Vector2.ZERO
 	if Input.is_action_pressed("move_left"):
 		animated_sprite_2d.flip_h = false
